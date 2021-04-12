@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		683463422624C8BA00FA0209 /* DynamicContactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683463412624C8BA00FA0209 /* DynamicContactsApp.swift */; };
-		683463442624C8BA00FA0209 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683463432624C8BA00FA0209 /* ContentView.swift */; };
+		683463442624C8BA00FA0209 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683463432624C8BA00FA0209 /* UsersView.swift */; };
 		683463462624C8BB00FA0209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683463452624C8BB00FA0209 /* Assets.xcassets */; };
 		683463492624C8BB00FA0209 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683463482624C8BB00FA0209 /* Preview Assets.xcassets */; };
+		685838AC2624DCE1006A1F7C /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685838AB2624DCE1006A1F7C /* ContactViewModel.swift */; };
+		685838B02624DD76006A1F7C /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685838AF2624DD76006A1F7C /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6834633E2624C8BA00FA0209 /* DynamicContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		683463412624C8BA00FA0209 /* DynamicContactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicContactsApp.swift; sourceTree = "<group>"; };
-		683463432624C8BA00FA0209 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		683463432624C8BA00FA0209 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		683463452624C8BB00FA0209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		683463482624C8BB00FA0209 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6834634A2624C8BB00FA0209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		685838AB2624DCE1006A1F7C /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		685838AF2624DD76006A1F7C /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6821B1262624DBF1002CBE70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				683463452624C8BB00FA0209 /* Assets.xcassets */,
+				6834634A2624C8BB00FA0209 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6821B1272624DC00002CBE70 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				683463432624C8BA00FA0209 /* UsersView.swift */,
+				685838AB2624DCE1006A1F7C /* ContactViewModel.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 		683463352624C8BA00FA0209 = {
 			isa = PBXGroup;
 			children = (
@@ -53,10 +75,10 @@
 			isa = PBXGroup;
 			children = (
 				683463412624C8BA00FA0209 /* DynamicContactsApp.swift */,
-				683463432624C8BA00FA0209 /* ContentView.swift */,
-				683463452624C8BB00FA0209 /* Assets.xcassets */,
-				6834634A2624C8BB00FA0209 /* Info.plist */,
+				6821B1272624DC00002CBE70 /* Users */,
+				6821B1262624DBF1002CBE70 /* Supporting Files */,
 				683463472624C8BB00FA0209 /* Preview Content */,
+				685838B22624DD7E006A1F7C /* UIUtils */,
 			);
 			path = DynamicContacts;
 			sourceTree = "<group>";
@@ -67,6 +89,14 @@
 				683463482624C8BB00FA0209 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		685838B22624DD7E006A1F7C /* UIUtils */ = {
+			isa = PBXGroup;
+			children = (
+				685838AF2624DD76006A1F7C /* ImageLoader.swift */,
+			);
+			path = UIUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				683463442624C8BA00FA0209 /* ContentView.swift in Sources */,
+				683463442624C8BA00FA0209 /* UsersView.swift in Sources */,
+				685838AC2624DCE1006A1F7C /* ContactViewModel.swift in Sources */,
+				685838B02624DD76006A1F7C /* ImageLoader.swift in Sources */,
 				683463422624C8BA00FA0209 /* DynamicContactsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +303,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DynamicContacts/Preview Content\"";
 				DEVELOPMENT_TEAM = 4U2DW67G88;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DynamicContacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DynamicContacts/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,7 +325,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DynamicContacts/Preview Content\"";
 				DEVELOPMENT_TEAM = 4U2DW67G88;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DynamicContacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DynamicContacts/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

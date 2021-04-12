@@ -11,7 +11,7 @@ import SwiftUI
 struct DynamicContactsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UsersView()
         }
     }
 }
