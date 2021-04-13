@@ -11,7 +11,9 @@ struct ContactsView: View {
     // MARK: use some Dependency injection
 
     private let contactsManager = ContactsManager()
+    @State var indexSet: IndexSet = []
     @State var contacts: [ContactViewModel] = []
+    @State var isPresented = false
 
     var body: some View {
         NavigationView {
@@ -20,15 +22,37 @@ struct ContactsView: View {
                     NavigationLink(destination: ContactDetailView(contact: contact)) {
                         ContactRow(contact: contact)
                     }
+                }.onDelete { indexSet in
+                    self.indexSet = indexSet
+                    isPresented = true
+                }.alert(isPresented: $isPresented) {
+                    Alert(
+                        title: Text("Delete contact"),
+                        message: Text("Are you sure you want to delete this ? This can't be undone..."),
+                        primaryButton: .cancel(),
+                        secondaryButton: .destructive(
+                            Text("Delete"),
+                            action: {
+                                withAnimation {
+                                    removeItem(at: indexSet)
+                                }
+                            }
+                        )
+                    )
                 }
             }
             .navigationBarTitle(Text("Contacts"))
             .onAppear {
                 contactsManager.getContacts { contacts in
+                    self.contacts.removeAll()
                     self.contacts.append(contentsOf: contacts)
                 }
             }
         }
+    }
+
+    private func removeItem(at offsets: IndexSet) {
+        contacts.remove(atOffsets: offsets)
     }
 }
 
