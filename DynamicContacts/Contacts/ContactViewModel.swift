@@ -9,5 +9,5 @@ import Foundation
 
 struct ContactViewModel: Identifiable {
     var id: Int
-    let username, message, imageURL: String
+    let username, email, imageURL: String
 }

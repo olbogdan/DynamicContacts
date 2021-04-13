@@ -22,7 +22,7 @@ class ContactsManager {
             let viewModels = contacts.data.map {
                 ContactViewModel(id: $0.id,
                                  username: $0.firstName,
-                                 message: $0.email,
+                                 email: $0.email,
                                  imageURL: $0.avatar)
             }
             completion(viewModels)

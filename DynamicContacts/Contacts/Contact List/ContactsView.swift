@@ -17,10 +17,12 @@ struct ContactsView: View {
         NavigationView {
             List {
                 ForEach(contacts) { contact in
-                    ContactRow(contact: contact)
+                    NavigationLink(destination: ContactDetailView(contact: contact)) {
+                        ContactRow(contact: contact)
+                    }
                 }
             }
-            .navigationBarTitle(Text("Dynamic List"))
+            .navigationBarTitle(Text("Contacts"))
             .onAppear {
                 contactsManager.getContacts { contacts in
                     self.contacts.append(contentsOf: contacts)
@@ -43,7 +45,7 @@ struct ContactRow: View {
             VStack(alignment: .leading) {
                 Text(contact.username)
                     .font(.headline)
-                Text(contact.message)
+                Text(contact.email)
             }.padding(.leading, 8)
         }
     }

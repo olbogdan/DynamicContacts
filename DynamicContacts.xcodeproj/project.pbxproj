@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		682243BD262504BE00DAB9FF /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682243BC262504BE00DAB9FF /* ContactsManager.swift */; };
+		682243C02625095900DAB9FF /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682243BF2625095900DAB9FF /* ContactDetailView.swift */; };
 		683463422624C8BA00FA0209 /* DynamicContactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683463412624C8BA00FA0209 /* DynamicContactsApp.swift */; };
 		683463442624C8BA00FA0209 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683463432624C8BA00FA0209 /* ContactsView.swift */; };
 		683463462624C8BB00FA0209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683463452624C8BB00FA0209 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		682243BC262504BE00DAB9FF /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
+		682243BF2625095900DAB9FF /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		6834633E2624C8BA00FA0209 /* DynamicContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		683463412624C8BA00FA0209 /* DynamicContactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicContactsApp.swift; sourceTree = "<group>"; };
 		683463432624C8BA00FA0209 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
@@ -55,12 +57,29 @@
 		6821B1272624DC00002CBE70 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				683463432624C8BA00FA0209 /* ContactsView.swift */,
-				685838AB2624DCE1006A1F7C /* ContactViewModel.swift */,
+				682243C52625099600DAB9FF /* Contact List */,
+				682243C32625097E00DAB9FF /* Contact Detail */,
 				685838BA2624F06B006A1F7C /* Repository */,
+				685838AB2624DCE1006A1F7C /* ContactViewModel.swift */,
 				682243BC262504BE00DAB9FF /* ContactsManager.swift */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		682243C32625097E00DAB9FF /* Contact Detail */ = {
+			isa = PBXGroup;
+			children = (
+				682243BF2625095900DAB9FF /* ContactDetailView.swift */,
+			);
+			path = "Contact Detail";
+			sourceTree = "<group>";
+		};
+		682243C52625099600DAB9FF /* Contact List */ = {
+			isa = PBXGroup;
+			children = (
+				683463432624C8BA00FA0209 /* ContactsView.swift */,
+			);
+			path = "Contact List";
 			sourceTree = "<group>";
 		};
 		683463352624C8BA00FA0209 = {
@@ -189,6 +208,7 @@
 				685838AC2624DCE1006A1F7C /* ContactViewModel.swift in Sources */,
 				685838B02624DD76006A1F7C /* ImageLoader.swift in Sources */,
 				685838BD2624F30D006A1F7C /* ContactsApi.swift in Sources */,
+				682243C02625095900DAB9FF /* ContactDetailView.swift in Sources */,
 				685838B82624F05E006A1F7C /* ContactDTO.swift in Sources */,
 				683463422624C8BA00FA0209 /* DynamicContactsApp.swift in Sources */,
 				682243BD262504BE00DAB9FF /* ContactsManager.swift in Sources */,
